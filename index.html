@@ -182,27 +182,32 @@
 
   .title-block{
     margin-top: 40px;
+    padding-top: 36px;
     border-top: 1px solid var(--hairline-strong);
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
   }
 
   .title-block .cell{
-    padding: 16px 20px;
-    border-right: 1px solid var(--hairline);
-    border-bottom: 1px solid var(--hairline-strong);
-    text-align: center;
+    flex: 1 1 170px;
   }
-  .title-block .cell:last-child{ border-right: none; }
 
   .title-block a{
-    color: var(--ink);
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    font-size: 15px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding: 15px 18px;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    text-decoration: none;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    letter-spacing: 0.02em;
     word-break: break-word;
+    transition: background 0.15s ease, color 0.15s ease;
   }
-  .title-block a:hover{ color: var(--accent); }
+  .title-block a:hover{ background: var(--accent); color: var(--bg); }
 
   /* ---------- SECTIONS ---------- */
   section{
@@ -327,8 +332,7 @@
 
   @media (max-width: 720px){
     .project-grid{ grid-template-columns: 1fr; }
-    .title-block{ grid-template-columns: 1fr; }
-    .title-block .cell{ border-right:none; }
+    .title-block{ flex-direction: column; }
     .spec-grid{ grid-template-columns: 1fr; }
     .hero, section{ padding: 32px 22px; }
   }
@@ -725,7 +729,7 @@
 
       <div class="title-block">
         <div class="cell">
-          <a href="mailto:maykelalfaroordonez04@gmail.com">Correo</a>
+          <a href="https://mail.google.com/mail/u/0/?to=maykelalfaroordonez04@gmail.com&fs=1&tf=cm" target="_blank" rel="noopener">Correo Electrónico</a>
         </div>
         <div class="cell">
           <a href="https://www.linkedin.com/in/ing-maykel-alfaro-data-analytics/" target="_blank" rel="noopener">LinkedIn</a>
